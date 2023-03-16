@@ -1,0 +1,76 @@
+<script>
+    // console.log("안녕");
+    //변수설정
+    // var = 변수선언, num1 = 변수명
+    //프로그래밍에서 "="은 같다라는 뜻이 아니라 변수를 할당한다하는 뜻
+    // ";" = 명령이 끝남
+    //변수는 데이터를 담는 '공간'이다
+    var num1 = 1;
+    // console.log(num1);
+
+    //변수의 데이터를 바꾸고 싶을때
+    // num1 = 2;
+    // console.log(num1);
+
+    //변수의 종류
+    var num2 = 1.2; //js 타입을 자동으로 인식
+    var str1 = "1";
+    var str2 = '1';
+    var bool1 = true;
+    var bool2 = false;
+    var nu = null; //값이 없다
+    var undef1 = undefined; //값 정의 x
+    var undef2;
+        
+    //프로그램에서 == 은 같다라는 뜻
+    // console.log(num1 == 1); // true
+    
+    //데이터 비교
+    // console.log(num1 == str1); //true, 변수의 값이 같으면 true로 출력
+    // console.log(num1 === str1) // false, data 와 type 까지 같아야 true로 출력
+
+    //1과 true 비교
+    //1 == true, 0 == false
+    // console.log(num1 == bool1); //true
+    // console.log(num1 === bool1); //false
+
+    //null과 undefinded 비교
+    // console.log(nu == undef1); //true
+    // console.log(nu === undef1); //false
+
+    // console.log(1.5 + 1.2); //2.5
+    //프로그래밍에서는 2진법을 사용하기 떄문에 10진법의 소수를 제대로 표현하기 어려움
+    // console.log(0.1 + 1.1); 
+    //절사 (몇 단윌 잘라냄)
+    //decimal
+
+    //c# or java 등에서는 1, int type
+    //js 자동으로 변환하여 계산, number type
+    // console.log(3 / 2); //1.5 
+    // console.log(parseInt(3/2)); //1
+    // console.log(3 % 2); //1 
+
+    // console.log(3 >= 2); //true
+    // console.log(!true); //false
+
+    //and 조건(flase를 찾아내거나 끝까지가면 멈춤)
+    // console.log(true && true); //true
+    // console.log(true && false ); //false, true -> false 조건검색 2번
+    // console.log(false && true ); //false  false -> true 조건검색 1번
+    // ** and조건 사용시 false가 자주오는 변수를 앞으로 설정하는게 성능 상  유리
+    
+    //or 조건(true를 찾아내거나 끝까지가면 멈춤)
+    // console.log(true || true); //true, 조건검색 1번
+    // console.log(false || true); //true, 조건검색 2번
+    // ** or 조건 사용시 true가 자주오는 변수를 앞으로 설정하는게 성능 상  유리
+
+    // console.log(false || null || 0 || undefined || "안녕");// 안녕
+    //null, 0, undefinded 등도 false 조건으로 사용이 가능
+    //마지막 조건이 true가 아니고 값이면 값을 리턴
+
+    //js에서는 값이 없으면 true로 인식
+    if("안녕"){
+    console.log("하세요");
+    }
+
+</script>
