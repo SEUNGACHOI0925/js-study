@@ -1,0 +1,81 @@
+<script>
+
+    //Object
+    //객체는 key : value 타입 
+    // 여러 데이터를 한 번에 저장하기 위해 사용
+    // -> 현실에 있는 걸 적용하기 위함
+    // -> ex)cat, (프로퍼티 : age),(메소드 : eat, jump, run)
+    // = 현실에 있는걸 추상화하기 위해 사용
+    var obj = {
+        // 객체가 가지고 있는 변수 
+        // = 필드 or 프로퍼티
+        key1 : "value1",
+        // 객체가 가지고 있는 함수
+        // = 메소드
+        key2 : function name(params){
+            
+        },
+        // 객체는 객체를 프로퍼티로 가질 수 있다
+        key3 : {
+            subkey1 : "subvalue1"
+        }
+    }
+    // 객체접근
+    obj.key1;
+
+
+
+    //셀 수 있는 타입
+    //array (리스트), js 배열없음 
+    // 같은 타입의 데이터가 반복 될 때 사용
+    // 인덱스를 가지고 있음
+    // 값이 중복되어도 상관이 없음
+    var arr1 = [1,2,3,4];
+    // js에서는 다른타입 끼리도 리스트로 만들 수 있음
+    var arr2 = [1, "안녕", true]
+    // new를 사용하여 선언 가능
+    var arr3 = new array(1,2,3);
+    //console.log(arr3);
+    // arr1[0];
+
+
+    //map
+    // key 와 value 쌍을 가지고 있음
+    // key는 중복되지 않음
+    // 제목과 내용이 둘 다 중요한 업무에 사용될 때 주로 사용
+    // 인덱스가 없고 key로 검색
+    // 제목은 중복되지 않음
+    // 값은 중복되어도 문제 없음
+    // 데이터에 순서 x
+    var tempMap1 = new Map();
+    // 데이터를 삽입 할 때는 set을 사용함
+    tempMap1.set("apple", 1);
+    // 데이터를 가져 올 때는 get을 사용함
+    tempMap1.get("apple", 1);
+
+
+
+    //set
+    // key만 가지고 있음
+    // key는 중복되지 않음
+    // 중복 되지않는 내용을 작성할 때 사용
+    // 데이터에 순서가 없음
+    var tampSet1 = new Set();
+    // 값을 넣을 떄
+    tampSet1.add("apple");
+    // 값이 있는지 찾을 때
+    tempSet1.has("apple");
+
+
+
+    //기타
+    // date(날짜 관련)
+    var tempDate = new Date();
+    var tempDate1 = new Date('2021-01-01');
+    console.log(tempDate1)
+
+    // math(수학 관련)
+
+//map, set, list 차이점 알아두기
+
+</script>
