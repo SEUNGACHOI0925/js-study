@@ -1,0 +1,62 @@
+<script>
+
+    // 1. 전개 연산자 (스프레드 연산자)
+        const cat1 = {
+            name : "야옹이",
+            age : 3,
+            say() {
+                console.log("야옹");
+            }
+        }
+
+        // 원래 고양이에 필드(프로퍼티) 값을 변경
+        cat1.age = cat1.age + 1;
+
+        // 새로운 고양이인데 나이만 cat1과 다르게 5살로 
+        const cat2 = {...cat1, age : 5}; 
+        //{...cat1 => cat1의 모든 정보가 들어감, 기존내용에서 변경되는 값}
+
+        //console.log(cat2);
+
+        // const cat2 = {
+        //     name : "야옹이",
+        //     age : 5,
+        //     say() {
+        //         console.log("야옹");
+        //     }
+        // }
+
+
+        const cat3 = {
+            name : "나비",
+            hobby : "공놀이"
+        }
+
+        const cat4 = {...cat1, ...cat3} //cat1의 정보에 cat3의 정보가 덮어씌워짐
+        //console.log(cat4);
+
+        // 배열도 스프레드 가능
+        const companys = ["apple", "naver", "kakao"];
+
+        const companys1 = [...companys, "meta"];
+        // console.log(companys1); // = (4) ['apple', 'naver', 'kakao', 'meta']
+
+        // 스프레드를 이용한 비구조화 할당
+        const [item1, ...etcCompanys] = companys1; 
+        //item1 에 apple이 들어감, 다른값을 더 넣으려면 뒤에 값을 더 넣거나 스프레드를 이용
+        // console.log(item1); 
+        // console.log(etcCompanys);
+
+        const { name, ...noNameCat } = cat1; //name 키 값을 제외한 나머지 값을 가져옴
+        console.log(name);
+        console.log(noNameCat);
+
+        
+
+    // 2. 비동기 객체 반복 for await of (생략)
+
+
+    // 3. Promise 에 finally 메소드 (생략)
+
+
+</script>
