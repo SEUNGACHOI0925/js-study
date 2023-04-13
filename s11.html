@@ -80,7 +80,7 @@
     //     func();
     // }
 
-    //일급객체 알아보기
+    //일급객체 알아보기(https://inpa.tistory.com/entry/CS-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-%EC%9D%BC%EA%B8%89-%EA%B0%9D%EC%B2%B4first-class-object)
     // myFunc(temp);//매개변수로 함수를 넣을 수있는가, 변수나 데이터에 할당 할 수 있어야함
 
     // const checkName = (name, checker) => {
@@ -137,5 +137,45 @@
         console.log(result);
 
 
+        //객체
+        const obj = {
+        key1 : "value1",
+        key2 (){
+            this.key1;
+        },
+        key3 : {
+            subkey1 : "subvalue1"
+        }
+    }
+
+    obj?.key3?.subkey1;
+
+    // Date
+
+    console.log(`Date.now() : ${Date.now()}`)//static 메소드
+    const myDate = new Date();
+    const tempDate = new Date('2023-01-01 12:00.000z');
+    console.log(myDate);
+    console.log(tempDate);
+
+    // console.log(`myDate.getFullYear() : ${myDate.getFullYear()}`);
+    // console.log(`myDate.getgetMonth() : ${myDate.getMonth()}`); //1월 = 0;3월=2,+1
+    // console.log(`myDate.getDate() : ${myDate.getDate()}`); 
+    // console.log(`myDate.getDay() : ${myDate.getDay()}`);
+    // console.log(`myDate.toJSON() : ${myDate.toJSON()}`);//표준시
+    
+    // navigator//window창의 기능을 다가지고있음
+    // window.document.getElementById(""); //==
+    // document.getElementById("");
+
+    // window.location.href = ""; //==
+    // location.href = "";
+
+    const a = 1;
+    console.log(a);
+
+    b = 1; //window 최상단에 변수로 집어넣는 방법 //window.b = 1;
+    console.log(window.a); //undefined
+    console.log(window.b);
 
 </script>
