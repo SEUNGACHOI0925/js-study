@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>제목</h1>
+    <h1>제목</h1>
+    <!-- <div id="myDiv" onclick="alert('확인')">아이디</div>
+    <div id="myDiv" onclick="alert(func())">아이디</div> -->
+    <div id="myDiv" style="color : gray">아이디</div>
+
+
+    <p class="my_div first">첫번째</p>
+    <p class="my_div second">두번째</p>
+</body>
+<script>
+    //html  컨트롤(문서조작)
+    const h1list = window.document.getElementsByTagName("h1");//getElements, by뒤 항목을 이용해 tag를 가져옴
+    const h1List2 = document.querySelector("h1");
+    
+
+    // console.log(h1list);
+    // console.log(h1List2.innerText);
+
+    const myDivElement = document.getElementById("myDiv");
+    //querySelector는 css 선택자를 이용한다
+    const myDivEl = document.querySelector("div[id*='D']");
+    // console.log(myDivEl);
+    // console.log(myDivElement);
+
+    myDivElement.setAttribute("style", "color:red");
+
+    const pElementList = document.getElementsByClassName("my_div");
+    const pElementList1 = document.querySelectorAll(".my_div");
+
+    pElementList1.forEach(element => {
+        console.log(element.innerText);
+    });
+
+    //속성 지정
+    // myDivElement.setAttribute("style", "color: blue");
+    // myDivElement.style.color = "skyblue";
+
+    //표준 속성은 .으로 찾아서 입력
+    myDivElement.innerText = "바꿈!";
+    //비표준 속성은 setAttribute 사용
+    myDivElement.setAttribute("asdf","예이");
+    
+
+    //태그에 기능 추가
+    // 1. 태그에 속성에 기능 추가하기(onclick = "alert('확인')")
+    const func = () => {
+        alert("확인2");
+    }
+    func();
+    //==
+    //(() => alert("체크"))();
+
+    // 2. 태그 객체의 기능 정의 해주기
+    myDivElement.onclick = func; 
+    console.log(myDivElement.onclick);
+
+    myDivElement.onclick = null;
+
+    // 3. 리스너 추가하기
+    myDivElement.addEventListener("click", func);
+    myDivElement.addEventListener("click", () => {// 이벤트기능 여러개 넣을수있음
+        alert("두번째 확인");
+    });
+
+    // myDivElement.removeEventListener("click",() => {//서로 달라 지워지지않음
+    //     alert("두번째 확인");
+    // });
+    myDivElement.removeEventListener("click", func);
+
+
+    //태그 만들기
+    const newElement = document.createElement("div");
+    newElement.innerText = "자바스크립트로 만든 태그";
+    newElement.onclick = () => alert("wowowow");
+    document.body.appendChild(newElement);
+
+    const newElement1 = document.createElement("h2");
+    newElement1.innerText = "교체 태그";
+    document.body.replaceChildren(newElement1, newElement);//(바꿀거, 바꾸기전)
+
+    document.body.removeChild(newElement1);
+
+    //클래스
+    const divElement = document.querySelector(".my_div");
+    console.log(divElement.className); //클래스명을 가져옴
+    console.log(divElement.classList); //리스트 타입으로 가져옴
+
+    // divElement.className = "check-class";
+    divElement.className.add("check-class");
+        
+    // css 가져오기
+    console.log(myDivElement.style.color);
+    console.log(getComputedStyle(myDivElement).color);
+    
+
+//시험 => 
+//오픈북으로 코딩테스트 (3시간 이내로) //0단계 기준 5문제
+// 배운 진도 기준
+//vscode에서 파일 .zip 풀어서 
+//해당 폴더에서 문제를 풀고 결과값을 내는식으로 제출
+</script>
+</html>
